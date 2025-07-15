@@ -1,0 +1,141 @@
+Microsoft Windows [Version 10.0.19045.6093]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\>mkdir gitdemo
+
+C:\>cd gitdemo
+
+C:\gitdemo>git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in C:/gitdemo/.git/
+
+C:\gitdemo>git config user.name "Chandana HR"
+
+C:\gitdemo>git config user.email "chandu15230@gmail.com"
+
+C:\gitdemo>git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+credential.helper=helper-selector
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+user.name=Chandana HR
+user.email=chandu15230@gmail.com
+
+C:\gitdemo>git config --global init.defaultBranch main
+
+C:\gitdemo>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\gitdemo>git add index.html
+
+C:\gitdemo>git add .
+
+C:\gitdemo>git commit -m "Message"
+[master (root-commit) b99ced5] Message
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+
+C:\gitdemo>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\gitdemo>git log
+commit b99ced567640d1582323fefa525f504bfdc887dc (HEAD -> master)
+Author: Chandana HR <chandu15230@gmail.com>
+Date:   Tue Jul 15 22:40:54 2025 +0530
+
+    Message
+
+C:\gitdemo>git show
+commit b99ced567640d1582323fefa525f504bfdc887dc (HEAD -> master)
+Author: Chandana HR <chandu15230@gmail.com>
+Date:   Tue Jul 15 22:40:54 2025 +0530
+
+    Message
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..d01f779
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
++</head>
++<body>
++
++</body>
++</html>
+\ No newline at end of file
+
+C:\gitdemo>git diff
+diff --git a/index.html b/index.html
+index d01f779..0892609 100644
+--- a/index.html
++++ b/index.html
+@@ -6,6 +6,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-
++    <h1>Welcome to git tutorial</h1>
+ </body>
+ </html>
+\ No newline at end of file
+
+C:\gitdemo>git add index.html
+
+C:\gitdemo>git diff --staged
+diff --git a/index.html b/index.html
+index d01f779..0892609 100644
+--- a/index.html
++++ b/index.html
+@@ -6,6 +6,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-
++    <h1>Welcome to git tutorial</h1>
+ </body>
+ </html>
+\ No newline at end of file
+
+C:\gitdemo>git commit -m "Newmessage"
+[master 55f6c77] Newmessage
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\gitdemo>
