@@ -50,3 +50,15 @@
                     CI/CD with GitHub Actions → automate testing and deployments.
                     Project Management → Kanban boards, milestones.
                     Social Coding → Fork, star, and follow projects just like a social network.
+
+1d) Install Git on Windows
+
+    Go to the official site → https://git-scm.com
+    Download the Windows installer.
+    Run the installer:
+    Choose editor (default is Vim, but you can select Notepad++ or VS Code).
+    Keep defaults unless you know you want something specific.
+    Make sure “Git Bash” and “Git GUI” are selected.
+    Finish installation.
+    Verify by opening Git Bash or Command Prompt and typing:
+                     git --version
