@@ -1,0 +1,64 @@
+1a) What is Version control system
+    A Version Control System (VCS) is a tool that helps track changes in your code/files over time.
+    You can save snapshots (versions) of your work.
+    You can revert back if something breaks.
+    You can collaborate with others without overwriting each other’s work.
+
+1b) Centralized vs Distributed VCS
+  Centralized VCS
+    There is one central server that stores the codebase and all its history.
+    Developers check out code from this central server, make changes, and then commit/push back.
+    The server is the single source of truth.
+    Advantages: Simple model → easy for beginners.
+                Admins can control access since everything is in one place.
+                Good for small teams.
+    Disadvantages:If the central server crashes → whole team is blocked.
+                  Developers must be online to commit changes.
+                  Slower in large projects (constant communication with server).
+    Example: Subversion (SVN)
+ Distributed VCS
+     Every developer has a full copy of the repository (code + history).
+     Work can be done offline, commits are local first.
+     Later, changes can be pushed/pulled to a shared remote server (like GitHub/GitLab/Bitbucket).
+     Advantages: No single point of failure. Even if GitHub goes down, your local repo has full history.
+                  Work offline, commit anytime.
+                  Branching & merging is much easier.
+                  Faster operations since commits are local.
+    Disadvantages: Slightly harder to learn at the beginning.
+                   Repo copies can take more disk space (but storage is cheap now).
+
+1c) - What is Git? What is GitHub?
+  Git
+      Git is a Distributed Version Control System (DVCS).
+      It was created in 2005 by Linus Torvalds (the creator of Linux 🐧).
+      Git tracks changes in source code and allows multiple developers to collaborate
+      Key features
+                  Distributed – Every developer has the entire repo + history locally.
+                  Snapshots not diffs – Instead of saving just changes, Git stores snapshots of your files.
+                  Branching & Merging – Create new branches, experiment, and merge changes back easily.
+                  Speed – Most operations are local → super fast.
+ Github
+     GitHub is a cloud-based hosting service for Git repositories.
+      It’s not Git itself, but a platform built on top of Git to make collaboration easy.
+      Founded in 2008, later acquired by Microsoft in 2018.
+      Key features:
+                    Remote Hosting – Store your Git repos online.
+                    Collaboration Tools –
+                                        Pull Requests (PRs) → propose code changes.
+                                        Issues → track bugs/tasks.
+                                        Discussions → communicate with the team.
+                    CI/CD with GitHub Actions → automate testing and deployments.
+                    Project Management → Kanban boards, milestones.
+                    Social Coding → Fork, star, and follow projects just like a social network.
+
+1d) Install Git on Windows
+
+    Go to the official site → https://git-scm.com
+    Download the Windows installer.
+    Run the installer:
+    Choose editor (default is Vim, but you can select Notepad++ or VS Code).
+    Keep defaults unless you know you want something specific.
+    Make sure “Git Bash” and “Git GUI” are selected.
+    Finish installation.
+    Verify by opening Git Bash or Command Prompt and typing:
+                     git --version
